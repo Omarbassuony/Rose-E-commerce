@@ -47,8 +47,8 @@ export default function TrustedBySection() {
         {/* Heading with highlighted number - using proper styling from image */}
         <h2 className="text-center font-bold text-2xl md:text-3xl text-neutral-800 mb-10 md:mb-16">
           <span className="inline-block relative">
-            {t('trusted-by-over')} <span className="text-pink-500">4.5k+</span> {t("companies")}
-            <span className="absolute -bottom-1 left-0 right-0 h-0.5 w-36 bg-pink-600"></span>
+            {t('trusted-by-over')} <span className="text-[#F82BA9]">4.5k+</span> {t("companies")}
+            <span className="absolute -bottom-1 left-0 right-0 h-0.5 w-36 bg-[#F82BA9]"></span>
           </span>
         </h2>
 

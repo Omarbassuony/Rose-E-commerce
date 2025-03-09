@@ -111,7 +111,7 @@ export default function TestimonialsCarousel() {
 
           {/* Left navigation button */}
           <button
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-pink-600 rounded-full shadow-md"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-[#F82BA9] rounded-full shadow-md"
             onClick={handlePrev}
           >
             {/* Chevron left icon for the button */}
@@ -135,17 +135,19 @@ export default function TestimonialsCarousel() {
                     <div className="flex justify-center items-center gap-2">
                       {/* Avatar section */}
                       <div>
-                        <img
+                        <Image
                           src={testimonial.avatar}
                           alt={t('customer-name', { name: testimonial.name })}
-                          className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full border-4 border-pink-500"
+                          className="w-12 h-12 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full"
+                        width={100}
+                        height={48}
                         />
                       </div>
 
                       {/* Name and role */}
                       <div>
                         <h3 className="text-base md:text-lg font-bold">{t('customer-name', { name: testimonial.name })}</h3>
-                        <p className="text-sm md:text-lg font-bold text-pink-600">{t('customer-role', { role: testimonial.role })}</p>
+                        <p className="text-sm md:text-lg font-bold text-[#F82BA9]">{t('customer-role', { role: testimonial.role })}</p>
                       </div>
                     </div>
 
@@ -158,10 +160,10 @@ export default function TestimonialsCarousel() {
                     {/* Rating section */}
                     <div className='flex mt-2 gap-1 justify-between w-full'>
                       <div className="flex gap-1">
-                        <span className="text-pink-600">★</span>
-                        <span className="text-pink-600">★</span>
-                        <span className="text-pink-600">★</span>
-                        <span className="text-pink-600">★</span>
+                        <span className="text-[#F82BA9]">★</span>
+                        <span className="text-[#F82BA9]">★</span>
+                        <span className="text-[#F82BA9]">★</span>
+                        <span className="text-[#F82BA9]">★</span>
                       </div>
                       <div className='flex relative'>
                         <AiFillMessage className='text-pink-200 text-[30px] md:text-[40px] lg:text-[50px]'/>
@@ -182,7 +184,7 @@ export default function TestimonialsCarousel() {
 
           {/* Right navigation button */}
           <button
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-pink-600 rounded-full shadow-md"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 bg-[#F82BA9] rounded-full shadow-md"
             onClick={handleNext}
           >
             {/* Chevron right icon for the button */}
@@ -197,7 +199,7 @@ export default function TestimonialsCarousel() {
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`h-2 w-2 rounded-full ${
-                index === currentIndex ? 'bg-pink-600' : 'bg-gray-300'
+                index === currentIndex ? 'bg-[#F82BA9]' : 'bg-gray-300'
               }`}
             />
           ))}
