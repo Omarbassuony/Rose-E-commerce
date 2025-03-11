@@ -130,24 +130,31 @@ export default function TestimonialsCarousel() {
                   className="flex-shrink-0 px-2 transition-all duration-300 mb-2"
                   style={{ width: `${100 / visibleCards}%` }}
                 >
-                  <div className="flex flex-col items-start p-4 md:p-6 lg:p-8 my-3 bg-white rounded-[60px] rounded-tl-xl h-full">
+                  <div className="flex flex-col items-start p-2 my-3 bg-white rounded-[60px] rounded-tl-xl">
                     {/* Testimonial header: avatar and details */}
                     <div className="flex justify-center items-center gap-2">
                       {/* Avatar section */}
-                      <div>
+                      <div className="relative">
+                      {/* Bottom-left semicircle */}
+                      <div 
+                        className="absolute w-10 h-12 md:w-12 md:h-14 lg:w-14 lg:h-16 bg-[#F82BA9] rounded-br-full rounded-bl-full bottom-0 left-0 z-1" style={{ clipPath: "polygon(0% 50%, 100% 100%, 0% 100%)" }}>
+                      </div>
+
+                      {/* Avatar */}
+                      <div className="relative z-50">
                         <Image
                           src={testimonial.avatar}
                           alt={t('customer-name', { name: testimonial.name })}
-                          className="w-12 h-12 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full"
-                        width={100}
-                        height={48}
+                          className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 rounded-full p-1"
+                          width={50}
+                          height={50}
                         />
                       </div>
-
+                    </div>
                       {/* Name and role */}
                       <div>
-                        <h3 className="text-base md:text-lg font-bold">{t('customer-name', { name: testimonial.name })}</h3>
-                        <p className="text-sm md:text-lg font-bold text-[#F82BA9]">{t('customer-role', { role: testimonial.role })}</p>
+                        <h2 className="text-[12px] font-semibold">{t('customer-name', { name: testimonial.name })}</h2>
+                        <p className="text-[12px] font-semibold text-[#F82BA9]">{t('customer-role', { role: testimonial.role })}</p>
                       </div>
                     </div>
 
@@ -155,7 +162,7 @@ export default function TestimonialsCarousel() {
                     <div className="border-[1px] border-[#757F95] w-full my-2"></div>
 
                     {/* Testimonial message */}
-                    <p className="mt-2 text-xs md:text-sm text-gray-600">{t('customer-message', { message: testimonial.message })}</p>
+                    <p className="mt-2 text-[12px] text-gray-600">{t('customer-message', { message: testimonial.message })}</p>
 
                     {/* Rating section */}
                     <div className='flex mt-2 gap-1 justify-between w-full'>
@@ -166,9 +173,9 @@ export default function TestimonialsCarousel() {
                         <span className="text-[#F82BA9]">★</span>
                       </div>
                       <div className='flex relative'>
-                        <AiFillMessage className='text-pink-200 text-[30px] md:text-[40px] lg:text-[50px]'/>
+                        <AiFillMessage className='text-pink-200 text-[35px] md:text-[39px] lg:text-[40px] mx-5'/>
                         <Image 
-                          className='w-[28px] md:w-[36px] lg:w-[46px] absolute left-[14px] md:left-[18px] lg:left-[23px] -top-[7px] md:-top-[9px] lg:-top-[12px]' 
+                          className='w-[28px] md:w-[33px] lg:w-[30px] absolute left-[39px] md:left-[39px] lg:left-[41px] -top-[7px] md:-top-[9px] lg:-top-[6px]' 
                           src="/assets/images/customer/Vector (1).png" 
                           alt="" 
                           width={100} 
@@ -208,3 +215,4 @@ export default function TestimonialsCarousel() {
     </main>
   );
 }
+
